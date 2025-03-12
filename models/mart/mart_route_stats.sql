@@ -1,8 +1,3 @@
-SELECT origin, dest, COUNT (*)
-FROM prep_flights
-GROUP BY (origin, dest)
-ORDER BY origin DESC ;
-
 WITH flight_route_stats AS (SELECT 
 								origin, dest, 
 								COUNT (flight_number) AS total_flights_route,
